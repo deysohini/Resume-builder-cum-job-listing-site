@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #C8A2C8;
+    font-size:40px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #217dbb;
+}
+    </style>
+    <title>Your Resumes</title>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+    
+    
+    <div class="card" id="resumeDetails">
+        <h1>Resume</h1>
+        <ul>
+                <p>Name:{{ resumes[1] }}</p>
+                <p>Educational Qualification:{{ resumes[2] }}</p>
+                <p>About:{{ resumes[3] }}</p>
+                <p>Experience:{{ resumes[5] }}</p>
+                <p>Skill:{{ resumes[4] }}</p>
+                <p>Location:{{ resumes[6]}}</p>
+        </ul>
+    </div>
+    <button id="downloadButton">Download Resume as PDF</button>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', () => {
+            const element = document.getElementById('resumeDetails');  
+            html2pdf(element);
+        });
+    </script>
+</body>
+</html>

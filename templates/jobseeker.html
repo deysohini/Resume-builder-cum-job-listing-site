@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Jobseeker Login</title>
+</head>
+
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">RBCJM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/us">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+        <div class="box p-4 animate__animated animate__fadeIn">
+            <header class="text-center mb-4">jobseeker Login</header>
+            <form method="POST" action="{{ url_for('loginjs')}}">
+                <div class="form-group">
+                    <label for="name" class="text-white">Username:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="username"
+                        required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="pwd" class="text-white">Password:</label>
+                    <input type="password" name="pwd" id="pwd" class="form-control" placeholder="password"
+                        required/>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="/registerjs" class="text-white">Don't have an account?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, jQuery, Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

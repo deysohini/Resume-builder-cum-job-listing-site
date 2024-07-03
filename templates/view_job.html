@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url({{ url_for('static', filename='mf.jpg') }});
+    font-size: 30px;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.container {
+  width: 500px;
+  flex-direction:column;
+  padding:0 15px 0 15px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+h3 {
+    color: #3498db;
+    font-size: 20px;
+}
+
+p {
+    color: #555;
+}
+    </style>
+    <title>Job Search</title>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+    <h1>Job Search</h1>
+    <h2>List of Jobs</h2>
+    <li>JOB NAME     &       DESCRIPTION</li>
+    <p>
+        {% for job in jobs %}
+            <li>{{ job[2] }}  :-  {{ job[3] }}</li>
+        {% endfor %}
+    </p>
+        </div>
+        </div>
+</body>
+</html>

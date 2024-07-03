@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.js')}}"> -->
+    <title>Login</title>
+	<style type="text/css">
+    body{
+      background-color: #f2f2f2;
+      text-align: center;
+      background-size:cover;
+	    background-image: url({{ url_for('static', filename='bro.jpg') }});
+      background-repeat: no-repeat;
+      background-position:center;
+      background-attachment:fixed;
+      }
+      form{
+      max-width:300px;
+      margin:0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius:4px;
+      }
+      .box{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      }
+      .container{
+      width: 350px;
+      flex-direction:column;
+      padding:0 15px 0 15px
+      }
+      header{
+        color: #faf9f9;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        padding:10px 0 10px 0;
+      }
+      label{
+      display:block;
+      margin-bottom: 10px;
+      color: #666;
+      }
+      input[type="text"], input[type="password"],input[type="number"],input[type="email"]{
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius:30px;
+      }
+      input[type="submit"]{
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 30px;
+      cursor:pointer;
+      }
+      .navbar{
+         padding-right:15px;padding-left:30px;
+        }
+      .navdiv{
+        display:rgb(6, 155, 160); align-items:center;justify-content:space-between;
+        }
+        .logo a{
+          font-weight:600;color:deepskyblue;
+        }
+        li{
+          list-style:none;display:inline-block;
+        }
+        li a{
+          color:darksalmon;font-weight:bold;margin-right:25px;
+        }
+</style >
+
+  </head>
+  <body>
+    <header> Login as</header><br/>
+    <h1>
+      <nav class="navbar">
+        
+        <div class="navdiv">
+          <ul>
+            <li><a href="/jobseeker">Job Seeker</a></li>
+            <li><a href="/employer">Employer</a></li>
+              
+           
+          </ul>
+        </div>
+      </nav></h1>
+
+  </body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="include/bootstrap.min.css">
+    <title>Job Seeker Dashboard</title>
+    <style>
+        body {
+          background-color: #f2f2f2;
+          background-image: url({{ url_for('static', filename='ok.jpg') }});
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .container {
+          width: 350px;
+          flex-direction:column;
+          padding:0 15px 0 15px;
+        }
+
+        header {
+            color: #fff;
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <header> Menu</header><br/>
+            <button onclick="window.location.href='{{ url_for('resume') }}'" style='background-color: #ff6f4b; width:100%; padding:10px; color:#000000; border-radius:30px; cursor:pointer;'>Create Resume</button><br /><br/>
+            <button onclick="window.location.href='{{ url_for('resumes') }}'" style='background-color: #f2ad73; width:100%; padding:10px; color:#000000; border-radius:30px; cursor:pointer;'>View Resume</button><br /><br/>
+            <button onclick="window.location.href='{{ url_for('view_job') }}'" style='background-color: #73dff2; width:100%; padding:10px; color:#000000; border-radius:30px; cursor:pointer;'>Available Jobs</button><br /><br/>
+        </div>
+    </div>
+</body>
+</html>

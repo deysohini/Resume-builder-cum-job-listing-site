@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+<style>
+    body {
+        background-color: #00008B;
+        background-image: url({{ url_for('static', filename='ok.jpg') }});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container {
+        width: 350px;
+        flex-direction:column;
+        padding:0 15px 0 15px;
+      }
+      header {
+        color: #fff;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+    <header> Menu</header><br/>
+    <button onclick='window.location.href="{{ url_for('post_job') }}"' style='background-color: #ff6f4b; width:100%; padding:10px; color:#000000; border-radius:30px; cursor:pointer;'>Upload Job</button><br /><br/>
+    </div>
+</div>
+</body>
+</html>
